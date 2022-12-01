@@ -1,0 +1,14 @@
+h1 {
+    color: orangered;
+    margin: 20px;
+}
+
+body {
+    background-image: url(images/orangeFish.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Chewy', cursive;
+    font-size: 1.5em;
+}
