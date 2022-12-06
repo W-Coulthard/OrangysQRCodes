@@ -12,3 +12,46 @@ body {
     font-family: 'Chewy', cursive;
     font-size: 1.5em;
 }
+
+.intro {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+#generate-form {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.input {
+    margin: 10px;
+    border-radius: 5px;
+    padding:10px;
+}
+
+.size {
+    margin: 10px;
+    border-radius: 5px;
+    padding:10px;
+}
+
+.gen-button {
+    margin: 10px;
+    border-radius: 5px;
+    padding:10px;
+    background-color: orangered;
+    color: white;
+}
+
+.gen-button:hover {
+    background-color: orange;
+    color: white;
+}

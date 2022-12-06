@@ -16,9 +16,32 @@
         <header>
             <h1>Orangy's QR Codes</h1>
         </header>
-        <section>
+        <main>
+            <p class="intro">Welcome to Orangy's QR code bowl,  <br>
+                Just enter the link below and click "Generate".</p>
 
-        </section>
+                <form id="generate-form">
+                    <input
+                      id="url"
+                      type="url"
+                      placeholder="https://example.com"
+                      class="input"/>
+                      <br>
+                      <select id="size" class="size">
+                        <option value="100">100x100</option>
+                        <option value="200">200x200</option>
+                        <option value="300">300x300</option>
+                        <option value="400">400x400</option>
+                        <option value="500">500x500</option>
+                        <option value="600">600x600</option>
+                        <option value="700">700x700</option> 
+                      </select>
+                      <br>
+                      <button type="submit" class="gen-button">Generate</button>
+                  </form>
+
+        </main>
+
 
         
         <script src="main.js" async defer></script>
