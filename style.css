@@ -54,3 +54,11 @@ body {
     background-color: orange;
     color: white;
 }
+
+.output {
+    background-color: hsla(0, 0%, 50%, 0.5);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}

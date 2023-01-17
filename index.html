@@ -12,6 +12,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
         <script src="js/main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
     </head>
     <body>
         <header>
@@ -40,6 +42,11 @@
                       <br>
                       <button type="submit" class="gen-button">Generate</button>
                   </form>
+                  <section class="output">
+                    <div id="qrcode"></div>
+                    <div id="spinner" style="display: none;"></div>
+                    <div id="generated"></div>
+                  </section>
 
         </main>
 
