@@ -48,6 +48,7 @@ body {
     padding:10px;
     background-color: orangered;
     color: white;
+    display: flex;
 }
 
 .gen-button:hover {
@@ -61,4 +62,19 @@ body {
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
+}
+
+#save-link{
+   text-decoration: none;
+   margin: 10px;
+   border-radius: 5px;
+   padding:10px;
+   background-color: orangered;
+   color: white;
+   display: flex;
+  }
+
+  #save-link:hover {
+    background-color: orange;
+    color: white;
 }
