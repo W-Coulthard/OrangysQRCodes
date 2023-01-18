@@ -3,7 +3,7 @@ h1 {
     margin: 5px;
     text-align: center;
     padding: 20px;
-    background-color: ;
+    font-size: 3.6rem;
 }
 
 body {
@@ -118,4 +118,12 @@ main {
     justify-content: center;
 }
 
-
+.spinner {
+    display: inline;
+    margin-right: 2px;
+    border-top: 16px solid orangered;
+    border-radius: 50%;
+    width: 124px;
+    height: 124px;
+    animation: spin 2s linear infinite;
+}
