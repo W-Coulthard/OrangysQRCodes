@@ -33,6 +33,7 @@ const generateQRCode = (url, size) => {
         width: size,
         height: size,
     });
+    document.querySelector(".output").style.display = "block";
 };
 
 const showSpinner = () => {
@@ -70,3 +71,5 @@ link.href = saveURL;
 link.download = 'qrcode';
 link.innerHTML = 'Save QR Code';
 document.getElementById('generated').appendChild(link);
+
+

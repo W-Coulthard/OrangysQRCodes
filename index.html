@@ -20,9 +20,13 @@
             <h1>Orangy's QR Code Maker</h1>
         </header>
         <main>
-            <p class="intro">Welcome to Orangy's QR code bowl were we make the best QR Codes around,  <br>
-                Just enter the web address below and click "Generate".</p>
-
+            
+              <section class="intro">
+                <p>Welcome to Orangy's QR code bowl were we make the best QR Codes around.  <br>
+                    Just enter the web address below and click "Generate".
+                </p>
+              </section>
+              <section class="form">
                 <form id="generate-form">
                     <input
                       id="url"
@@ -41,12 +45,14 @@
                       </select>
                       <br>
                       <button type="submit" class="gen-button">Generate</button>
-                  </form>
-                  <section class="output">
-                    <div id="qrcode"></div>
-                    <div id="spinner" style="display: none;"></div>
-                    <div id="generated"></div>
-                  </section>
+                </form>
+              </section>
+              <section class="output">
+                <div id="qrcode"></div>
+                <div id="spinner" style="display: none;"></div>
+                <div id="generated"></div>
+             </section>
+            
 
         </main>
 

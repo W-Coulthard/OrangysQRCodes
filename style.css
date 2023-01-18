@@ -1,7 +1,9 @@
 h1 {
     color: orangered;
-    margin: 20px;
+    margin: 5px;
     text-align: center;
+    padding: 20px;
+    background-color: ;
 }
 
 body {
@@ -14,15 +16,22 @@ body {
     font-size: 1.5em;
 }
 
+main {
+    width: 600px;
+    margin: 0 auto;
+}
+
 .intro {
     background-color: hsla(0, 0%, 50%, 0.5);
     color: white;
-    padding: 20px;
-    margin: 20px;
+    padding: 0px 20px 0px 20px;
+    margin: 5px;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    
 }
 
 #generate-form {
@@ -32,27 +41,28 @@ body {
     flex-direction: column;
     background-color: hsla(0, 0%, 50%, 0.5);
     color: white;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
+    margin: 5px;
     border-radius: 20px;
+    
 }
 
 .input {
-    margin: 10px;
+    margin: 0px;
     border-radius: 5px;
-    padding:10px;
+    padding:8px;
     width: 200px;
 }
 
 .size {
-    margin: -10px;
+    margin: 0px;
     border-radius: 5px;
-    padding:10px;
+    padding:8px;
     width: 150px;
 }
 
 .gen-button {
-    margin: 10px;
+    margin: 0px;
     border-radius: 5px;
     padding:10px;
     background-color: orangered;
@@ -69,11 +79,13 @@ body {
 }
 
 .output {
+    display: none;
     background-color: hsla(0, 0%, 50%, 0.5);
     color: white;
     padding: 20px;
-    margin: 20px;
+    margin: 5px;
     border-radius: 20px;
+
 }
 
 #save-link{
@@ -105,3 +117,5 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+
