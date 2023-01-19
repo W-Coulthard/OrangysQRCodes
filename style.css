@@ -3,7 +3,11 @@ h1 {
     margin: 5px;
     text-align: center;
     padding: 20px;
-    font-size: 3.6rem;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 body {
@@ -149,3 +153,14 @@ main {
         margin: 5px;
         border-radius: 20px;
     }
+
+    @media only screen and (max-width: 600px) {
+        body {
+          font-size: 2em;
+        }
+        
+        main {
+          width: 100%;
+        }
+      }
+      
