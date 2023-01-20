@@ -13,54 +13,49 @@
         <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
         <script src="js/main.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-
     </head>
     <body>
         <header>
             <h1>Orangy's QR Code Maker</h1>
         </header>
         <main>
-            
-              <section class="intro">
-                <p>Welcome to Orangy's QR code generation bowl, where we make the best QR Codes around.  <br>
-                    Just enter the web address below and click "Generate". <br>
-                    Then like magic, your QR code will appear! <br>
-                </p>
-              </section>
-              <section class="form">
-                <form id="generate-form">
-                    <input
-                      id="url"
-                      type="url"
-                      placeholder="https://example.com"
-                      class="input"/>
-                      <br>
-                      <select id="size" class="size">
-                        <option value="100">100x100</option>
-                        <option value="200">200x200</option>
-                        <option value="300">300x300</option>
-                        <option value="400">400x400</option>
-                        <option value="500">500x500</option>
-                        <option value="600">600x600</option>
-                        <option value="700">700x700</option> 
-                      </select>
-                      <br>
-                      <button type="submit" class="gen-button">Generate</button>
-                </form>
-              </section>
-              <section class="output">
-                <div id="qrcode"></div>
-                <div id="generated"></div>
-                <div id="spinner" role="status">
-                <div class="spinner-container">
-                  <div class="spinner"></div>
-                </div>
-                <span class="loading">Bubble bubble...</span> 
-                </div>
-             </section>
-            
-
+          <section class="intro">
+            <p>Welcome to Orangy's QR code generation bowl, where we make the best QR Codes around.  <br>
+                Just enter the web address below and click "Generate". <br>
+                Then like magic, your QR code will appear! <br>
+            </p>
+          </section>
+          <section class="form">
+            <form id="generate-form">
+                <input
+                  id="url"
+                  type="url"
+                  placeholder="https://example.com"
+                  class="input"/>
+                  <br>
+                  <select id="size" class="size">
+                    <option value="100">100x100</option>
+                    <option value="200">200x200</option>
+                    <option value="300">300x300</option>
+                    <option value="400">400x400</option>
+                    <option value="500">500x500</option>
+                    <option value="600">600x600</option>
+                    <option value="700">700x700</option> 
+                  </select>
+                  <br>
+                  <button type="submit" class="gen-button">Generate</button>
+            </form>
+          </section>
+          <section class="output">
+            <div id="qrcode"></div>
+            <div id="generated"></div>
+            <div id="spinner" role="status">
+            <div class="spinner-container">
+              <div class="spinner"></div>
+            </div>
+            <span class="loading">Bubble bubble...</span> 
+            </div>
+         </section>
         </main>
-
     </body>
 </html>

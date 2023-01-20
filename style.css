@@ -104,7 +104,7 @@ main {
     border: 2px solid black;
   }
 
-  #save-link:hover {
+#save-link:hover {
     background-color: orange;
     color: white;
 
@@ -123,44 +123,44 @@ main {
 }
 
 .spinner {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db; 
     border-radius: 50%;
     width: 120px;
     height: 120px;
     animation: spin 1s linear infinite;   
-  }
+}
   
-  @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
 
-  .spinner-container{
+.spinner-container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    }
+}
 
-    .loading {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: white;
-        padding: 20px;
-        margin: 5px;
-        border-radius: 20px;
-    }
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 20px;
+}
 
-    @media only screen and (max-width: 600px) {
-        body {
-          font-size: 2em;
-        }
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 2em;
+    }
         
-        main {
-          width: 100%;
-        }
-      }
+    main {
+        width: 100%;
+    }
+}
       
