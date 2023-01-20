@@ -1,3 +1,5 @@
+![Screenshot of Orangy's QR Code Maker](images/Untitled.png)
+
 Orangy's QR Code Maker
 Orangy's QR Code Maker is a simple web application that allows you to generate custom QR codes. With a user-friendly interface and a sleek design, you can easily create QR codes for any website or link.
 
