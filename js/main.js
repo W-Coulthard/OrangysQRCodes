@@ -3,7 +3,7 @@ const qr = document.getElementById('qrcode');
 
 const onGenerateSubmit = (e) => {
     e.preventDefault();
-
+    form.querySelector('button[type="submit"]').disabled = true;  // added line
     clearUI();
 
     const url = document.getElementById('url').value;
@@ -34,6 +34,7 @@ const generateQRCode = (url, size) => {
         height: size,
     });
     document.querySelector(".output").style.display = "block";
+    form.querySelector('button[type="submit"]').disabled = false; // added line
 };
 
 const showSpinner = () => {
@@ -71,5 +72,4 @@ link.href = saveURL;
 link.download = 'qrcode';
 link.innerHTML = 'Save QR Code';
 document.getElementById('generated').appendChild(link);
-
 
