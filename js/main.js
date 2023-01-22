@@ -3,28 +3,22 @@ const qr = document.getElementById('qrcode');
 
 const onGenerateSubmit = (e) => {
     e.preventDefault();
-    form.querySelector('button[type="submit"]').disabled = true;  // added line
+    form.querySelector('button[type="submit"]').disabled = true; 
     clearUI();
 
     const url = document.getElementById('url').value;
     const size = document.getElementById('size').value;
 
-    if (url === '') {
-        alert('Please enter a URL');
-    } else {
-        showSpinner();
+if (url === '') {
+    alert('Please enter a URL');
+} else {
+    showSpinner();
 
-        setTimeout(() => {
-            hideSpinner();
-            
-            generateQRCode(url, size);
-
-            setTimeout(() => {
-                const saveUrl = qr.querySelector('img').src;
-                createSaveBtn(saveUrl);
-            }, 50);
-        }, 1000);
-    }
+    setTimeout(() => {
+        generateQRCode(url, size);
+        
+    },);
+}
 };
 
 const generateQRCode = (url, size) => {
@@ -34,8 +28,15 @@ const generateQRCode = (url, size) => {
         height: size,
     });
     document.querySelector(".output").style.display = "block";
-    form.querySelector('button[type="submit"]').disabled = false; // added line
+    form.querySelector('button[type="submit"]').disabled = false;
+    setTimeout(() => {
+        const saveUrl = qr.querySelector('img').src;
+        createSaveBtn(saveUrl);
+        hideSpinner();
+    }, 1000);
 };
+
+
 
 const showSpinner = () => {
     document.getElementById('spinner').style.display = 'block';
@@ -62,14 +63,6 @@ const createSaveBtn = (saveURL) => {
     document.getElementById('generated').appendChild(link);
 };
 
-hideSpinner();
-
 form.addEventListener('submit', onGenerateSubmit);
 
-const link = document.createElement('a');
-link.id = 'save-link';
-link.href = saveURL;
-link.download = 'qrcode';
-link.innerHTML = 'Save QR Code';
-document.getElementById('generated').appendChild(link);
 
