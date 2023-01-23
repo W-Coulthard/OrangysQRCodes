@@ -29,6 +29,11 @@ const generateQRCode = (url, size) => {
     });
     document.querySelector(".output").style.display = "block";
     form.querySelector('button[type="submit"]').disabled = false; 
+    setTimeout(() => {
+        const saveUrl = qr.querySelector('img').src;
+        createSaveBtn(saveUrl);
+        hideSpinner();
+    }, 1000);
 };
 
 
