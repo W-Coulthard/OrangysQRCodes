@@ -59,5 +59,3 @@ const createSaveBtn = (saveURL) => {
 };
 
 form.addEventListener('submit', onGenerateSubmit);
-
-
