@@ -133,7 +133,7 @@ main {
     width: 120px;
     height: 120px;
     animation: spin 1s linear infinite;   
-    display: block;
+    display: none;
 }
   
 @keyframes spin {
@@ -142,6 +142,7 @@ main {
 }
 
 .loading {
+    visibility: visible;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -166,4 +167,3 @@ main {
         width: 100%;
     }
 }
-

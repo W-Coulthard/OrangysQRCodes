@@ -3,22 +3,29 @@ const qr = document.getElementById('qrcode');
 
 const onGenerateSubmit = (e) => {
     e.preventDefault();
-    form.querySelector('button[type="submit"]').disabled = true;  
+    form.querySelector('button[type="submit"]').disabled = true;
+
     clearUI();
 
     const url = document.getElementById('url').value;
     const size = document.getElementById('size').value;
 
-if (url === '') {
-    alert('Please enter a URL');
-} else {
-    showSpinner();
+    if (url === '') {
+        alert('Please enter a URL');
+    } else {
+        showSpinner();
 
-    setTimeout(() => {
-        generateQRCode(url, size);
-        
-    },);
-}
+        setTimeout(() => {
+            hideSpinner();
+
+            generateQRCode(url, size);
+
+            setTimeout(() => {
+                const saveUrl = qr.querySelector('img').src;
+                createSaveBtn(saveUrl);
+            }, 50);
+        }, 1000);
+    }
 };
 
 const generateQRCode = (url, size) => {
@@ -28,15 +35,8 @@ const generateQRCode = (url, size) => {
         height: size,
     });
     document.querySelector(".output").style.display = "block";
-    form.querySelector('button[type="submit"]').disabled = false; 
-    setTimeout(() => {
-        const saveUrl = qr.querySelector('img').src;
-        createSaveBtn(saveUrl);
-        hideSpinner();
-    }, 1000);
+    form.querySelector('button[type="submit"]').disabled = false;
 };
-
-
 
 const showSpinner = () => {
     document.getElementById('spinner').style.display = 'block';
