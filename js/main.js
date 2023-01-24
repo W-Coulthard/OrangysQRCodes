@@ -4,30 +4,28 @@ const qr = document.getElementById('qrcode');
 const onGenerateSubmit = (e) => {
     e.preventDefault();
     form.querySelector('button[type="submit"]').disabled = true;
-
+  
     clearUI();
-
+  
     const url = document.getElementById('url').value;
     const size = document.getElementById('size').value;
-
+  
     if (url === '') {
-        alert('Please enter a URL');
+      alert('Please enter a URL');
     } else {
-        showSpinner();
-       
-        setTimeout(() => {
-            generateQRCode(url, size);
-            const saveUrl = qr.querySelector('img').src;
-            createSaveBtn(saveUrl);
-            hideGenerated();
-            hideSpinner();
-        }, 1000);
+      showSpinner();
 
+      setTimeout(() => {
+        hideSpinner();
+        generateQRCode(url, size);
+  
         setTimeout(() => {
-            showGenerated();
-        }, 1000);
+          const saveUrl = qr.querySelector('img').src;
+          createSaveBtn(saveUrl);
+        }, 50);
+      }, 1000);
     }
-};
+  };
 
 
 const generateQRCode = (url, size) => {
