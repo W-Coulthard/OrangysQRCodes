@@ -170,4 +170,23 @@ main {
     main {
         width: 100%;
     }
+
+    .loading {
+        visibility: visible;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        font-size: .7em;
+    }
+    
 }

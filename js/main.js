@@ -1,7 +1,7 @@
 const form = document.getElementById('generate-form');
 const qr = document.getElementById('qrcode');
 
-const onGenerateSubmit = async (e) => {
+const onGenerateSubmit = (e) => {
     e.preventDefault();
     form.querySelector('button[type="submit"]').disabled = true;
 
@@ -14,38 +14,30 @@ const onGenerateSubmit = async (e) => {
         alert('Please enter a URL');
     } else {
         showSpinner();
-        try {
-            await generateQRCode(url, size);
+       
+        setTimeout(() => {
+            generateQRCode(url, size);
             const saveUrl = qr.querySelector('img').src;
             createSaveBtn(saveUrl);
             hideGenerated();
-        } catch (error) {
-            console.error(error);
-        } finally {
             hideSpinner();
+        }, 1000);
+
+        setTimeout(() => {
             showGenerated();
-            form.querySelector('button[type="submit"]').disabled = false;
-        }
+        }, 1000);
     }
 };
 
 
-const generateQRCode = async (url, size) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            try {
-                const qrcode = new QRCode('qrcode', {
-                    text: url,
-                    width: size,
-                    height: size,
-                });
-                document.querySelector(".output").style.display = "block";
-                resolve();
-            } catch (error) {
-                reject(error);
-            }
-        }, 1000);
+const generateQRCode = (url, size) => {
+    const qrcode = new QRCode('qrcode', {
+        text: url,
+        width: size,
+        height: size,
     });
+    document.querySelector(".output").style.display = "block";
+    form.querySelector('button[type="submit"]').disabled = false;
 };
 
 const showSpinner = () => {
