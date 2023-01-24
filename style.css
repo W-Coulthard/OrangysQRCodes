@@ -118,12 +118,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #generated {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #spinner {
@@ -132,8 +134,10 @@ main {
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: spin 1s linear infinite;   
+    animation: spin 1s linear infinite;
     display: none;
+    opacity: 1;
+    visibility: visible;
 }
   
 @keyframes spin {
