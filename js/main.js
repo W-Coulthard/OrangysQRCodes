@@ -3,29 +3,30 @@ const qr = document.getElementById('qrcode');
 
 const onGenerateSubmit = (e) => {
     e.preventDefault();
-
+    form.querySelector('button[type="submit"]').disabled = true;
+  
     clearUI();
-
+  
     const url = document.getElementById('url').value;
     const size = document.getElementById('size').value;
-
+  
     if (url === '') {
-        alert('Please enter a URL');
+      alert('Please enter a URL');
     } else {
-        showSpinner();
+      showSpinner();
 
+      setTimeout(() => {
+        hideSpinner();
+        generateQRCode(url, size);
+  
         setTimeout(() => {
-            hideSpinner();
-            
-            generateQRCode(url, size);
-
-            setTimeout(() => {
-                const saveUrl = qr.querySelector('img').src;
-                createSaveBtn(saveUrl);
-            }, 50);
-        }, 1000);
+          const saveUrl = qr.querySelector('img').src;
+          createSaveBtn(saveUrl);
+        }, 50);
+      }, 1000);
     }
-};
+  };
+
 
 const generateQRCode = (url, size) => {
     const qrcode = new QRCode('qrcode', {
@@ -34,6 +35,7 @@ const generateQRCode = (url, size) => {
         height: size,
     });
     document.querySelector(".output").style.display = "block";
+    form.querySelector('button[type="submit"]').disabled = false;
 };
 
 const showSpinner = () => {
@@ -42,6 +44,16 @@ const showSpinner = () => {
 
 const hideSpinner = () => {
     document.getElementById('spinner').style.display = 'none';
+};
+
+const hideGenerated = () => {
+    document.getElementById("qrcode").style.display = "none";
+    document.getElementById("generated").style.display = "none";
+};
+
+const showGenerated = () => {
+    document.getElementById("qrcode").style.display = "flex";
+    document.getElementById("generated").style.display = "block";
 };
 
 const clearUI = () => {
@@ -61,15 +73,4 @@ const createSaveBtn = (saveURL) => {
     document.getElementById('generated').appendChild(link);
 };
 
-hideSpinner();
-
 form.addEventListener('submit', onGenerateSubmit);
-
-const link = document.createElement('a');
-link.id = 'save-link';
-link.href = saveURL;
-link.download = 'qrcode';
-link.innerHTML = 'Save QR Code';
-document.getElementById('generated').appendChild(link);
-
-

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -7,6 +5,7 @@
         <title>Orangy's QR Codes</title>
         <meta name="description" content="qr code generator">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="/images/qrFish1.ico"/>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,16 +45,14 @@
                   <button type="submit" class="gen-button">Generate</button>
             </form>
           </section>
+          <div id="spinner" role="status">
+            <span class="loading">Bubble bubble...</span> 
+          </div>
           <section class="output">
             <div id="qrcode"></div>
             <div id="generated"></div>
-            <div id="spinner" role="status">
-            <div class="spinner-container">
-              <div class="spinner"></div>
-            </div>
-            <span class="loading">Bubble bubble...</span> 
-            </div>
-         </section>
+           </section>
         </main>
     </body>
 </html>
+

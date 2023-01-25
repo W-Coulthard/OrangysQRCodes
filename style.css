@@ -23,6 +23,10 @@ body {
 main {
     width: 600px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .intro {
@@ -122,13 +126,16 @@ main {
     justify-content: center;
 }
 
-.spinner {
+#spinner {
     border: 16px solid #f3f3f3;
     border-top: 16px solid #3498db; 
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: spin 1s linear infinite;   
+    animation: spin 1s linear infinite;
+    display: none;
+    opacity: 1;
+    visibility: visible;
 }
   
 @keyframes spin {
@@ -136,15 +143,8 @@ main {
     100% { transform: rotate(360deg); }
 }
 
-.spinner-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .loading {
-    display: flex;
+    visibility: visible;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -152,6 +152,12 @@ main {
     padding: 20px;
     margin: 5px;
     border-radius: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 600px) {
@@ -162,5 +168,23 @@ main {
     main {
         width: 100%;
     }
+
+    .loading {
+        visibility: visible;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        font-size: .7em;
+    }
+    
 }
-      
