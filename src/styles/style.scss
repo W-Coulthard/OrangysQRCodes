@@ -4,14 +4,14 @@ h1 {
     text-align: center;
     padding: 20px;
     font-size: 3rem;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
 body {
-    background-image: url(/src/images/orangeFish.png);
+    background-image: url(../images/orangeFish.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
