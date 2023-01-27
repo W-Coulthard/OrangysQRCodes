@@ -65,12 +65,17 @@ const clearUI = () => {
 };
 
 const createSaveBtn = (saveURL) => { 
-    const link = document.createElement('a');
-    link.id = 'save-link';
-    link.href = saveURL;
-    link.download = 'qrcode';
-    link.innerHTML = 'Save QR Code';
-    document.getElementById('generated').appendChild(link);
+  const link = document.createElement('a');
+  link.id = 'save-link';
+
+  const canvas = document.getElementById("qrcode").querySelector("canvas");
+  const dataURL = canvas.toDataURL("image/png");
+
+  link.href = dataURL;
+  link.download = 'qrcode.png';
+  link.innerHTML = 'Save QR Code';
+  document.getElementById('generated').appendChild(link);
 };
+
 
 form.addEventListener('submit', onGenerateSubmit);
